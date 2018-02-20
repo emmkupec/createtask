@@ -32,8 +32,7 @@ class UsernameViewController: UIViewController {
         } else {
             
         var username = usernameTextField.text
-        var userlogged = (username)
-            print(userlogged)
+            print(username)
            
             performSegue(withIdentifier: "usernameCreatedSegue", sender: self)
         }

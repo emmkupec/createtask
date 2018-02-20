@@ -44,9 +44,6 @@ class PostViewController: UIViewController {
         })
         
         
-        
-        
-        
     }
     
     
