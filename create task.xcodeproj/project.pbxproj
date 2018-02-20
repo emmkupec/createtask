@@ -21,7 +21,6 @@
 		DCBA99F0203B915200A1FCE5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA99EF203B915200A1FCE5 /* LoginViewController.swift */; };
 		DCBA99F2203B944800A1FCE5 /* UsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA99F1203B944800A1FCE5 /* UsernameViewController.swift */; };
 		DCBA99F4203B9B7700A1FCE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA99F3203B9B7700A1FCE5 /* ViewController.swift */; };
-		DCBA99F6203BA04E00A1FCE5 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA99F5203BA04E00A1FCE5 /* PostViewController.swift */; };
 		E2C8059F95DEEBAA4E79870A /* Pods_create_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA8E7D73831951740CD340F /* Pods_create_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +67,6 @@
 		DCBA99EF203B915200A1FCE5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DCBA99F1203B944800A1FCE5 /* UsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameViewController.swift; sourceTree = "<group>"; };
 		DCBA99F3203B9B7700A1FCE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCBA99F5203BA04E00A1FCE5 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		DDA8E7D73831951740CD340F /* Pods_create_task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_create_task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45BBD4B099191C62375A4B5 /* Pods-create task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-create task.release.xcconfig"; path = "Pods/Target Support Files/Pods-create task/Pods-create task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +152,6 @@
 				DCBA99EF203B915200A1FCE5 /* LoginViewController.swift */,
 				DCBA99F1203B944800A1FCE5 /* UsernameViewController.swift */,
 				DCBA99F3203B9B7700A1FCE5 /* ViewController.swift */,
-				DCBA99F5203BA04E00A1FCE5 /* PostViewController.swift */,
 				DCBA99C1203B746000A1FCE5 /* Main.storyboard */,
 				DCBA99C4203B746000A1FCE5 /* Assets.xcassets */,
 				DCBA99C6203B746000A1FCE5 /* LaunchScreen.storyboard */,
@@ -484,7 +481,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCBA99F6203BA04E00A1FCE5 /* PostViewController.swift in Sources */,
 				DCBA99F4203B9B7700A1FCE5 /* ViewController.swift in Sources */,
 				DCBA99F0203B915200A1FCE5 /* LoginViewController.swift in Sources */,
 				DCBA99C0203B746000A1FCE5 /* SignUpViewController.swift in Sources */,
