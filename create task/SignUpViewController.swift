@@ -6,13 +6,12 @@
 //  Copyright © 2018 emma kupec. All rights reserved.
 //
 
-
 import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class SignUpViewController: UIViewController {
  
     //email text field
     @IBOutlet weak var emailTextField: UITextField!
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
     //sign up sequence begins, checks to see if all text fields have entries, passwords match, then creates user
     @IBAction func signUpButton(_ sender: Any) {
       
-        print("start")
+        print("test")
         
         if emailTextField.text == "" || passwordTextField.text == "" {
         
@@ -37,6 +36,8 @@ class ViewController: UIViewController {
             
             present(alertController, animated: true, completion: nil)
         
+            print("denied1")
+            
         } else {
         
             if confirmPasswordTextField.text == "" {
@@ -47,6 +48,8 @@ class ViewController: UIViewController {
                 alertController.addAction(defaultAction)
                 
                 present(alertController, animated: true, completion: nil)
+                
+                print("denied2")
                 
                 
             } else {
@@ -60,14 +63,16 @@ class ViewController: UIViewController {
                     
                     present(alertController, animated: true, completion: nil)
                     
+                    print("denied3")
+                    
                 } else {
                  
                      Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in }
                     
                   print("Welcome to the team")
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbUsername")
-                    self.present(vc!, animated: true, completion: nil)
+                   performSegue(withIdentifier: "signUpSegue", sender: self)
+                    
                 }
                     
                     
@@ -77,12 +82,6 @@ class ViewController: UIViewController {
 
         }
         
-    
-        
-        
-        
-        
-    
     
   //to login page from sign up
 @IBAction func toLoginButton(_ sender: Any) {

@@ -10,6 +10,39 @@ import UIKit
 
 class UsernameViewController: UIViewController {
 
+    var userlogged = String?.self
+    
+    //the user creates a unique username
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    //stores username in variable "user" and moves to home page
+    @IBAction func createUsernameButton(_ sender: Any) {
+        
+        if usernameTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter a Username.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+        var username = usernameTextField.text
+        var userlogged = (username)
+            print(userlogged)
+           
+            performSegue(withIdentifier: "usernameCreatedSegue", sender: self)
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
