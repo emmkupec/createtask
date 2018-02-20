@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WCH-fd-jqb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,6 +45,7 @@
                                 <state key="normal" title="JOIN THE TEAM"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="En5-hn-4yC"/>
+                                    <segue destination="Kb5-sd-Y9d" kind="show" identifier="usernameSegue" id="Mn2-7N-z5F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhv-gL-BKg">
@@ -94,7 +95,7 @@
         <!--Username View Controller-->
         <scene sceneID="ReZ-dF-Ogx">
             <objects>
-                <viewController storyboardIdentifier="sbUsernameCreate" id="Kb5-sd-Y9d" customClass="UsernameViewController" customModule="create_task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbUsername" id="Kb5-sd-Y9d" customClass="UsernameViewController" customModule="create_task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y5r-Nj-581">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,8 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="7TX-xX-oa1"/>
                     </view>
                     <connections>
-                        <outlet property="usernameTexField" destination="1Dd-Tu-02q" id="C2c-Ka-B1F"/>
-                        <outlet property="usernameTextField" destination="1Dd-Tu-02q" id="Kge-Tz-zvV"/>
+                        <outlet property="usernameTextField" destination="1Dd-Tu-02q" id="X73-f6-3fz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQs-OC-QNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,7 +293,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XpP-MQ-DMX"/>
         <segue reference="wom-Ps-bja"/>
     </inferredMetricsTieBreakers>
 </document>

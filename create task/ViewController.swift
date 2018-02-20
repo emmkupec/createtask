@@ -48,6 +48,8 @@ class ViewController: UIViewController, UITableViewDataSource {
             
             self.text=post!
             
+
+            
         })
         
         
@@ -100,4 +102,7 @@ class ViewController: UIViewController, UITableViewDataSource {
      */
     
 }
+
+
+
 

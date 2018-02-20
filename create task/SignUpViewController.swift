@@ -80,8 +80,12 @@ class SignUpViewController: UIViewController {
                     
                   print("Welcome to the team")
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbUsernameCreate")
-                    self.present(vc!, animated: true, completion: nil)
+                    performSegue(withIdentifier: "usernameSegue", sender: self)
+                    
+                    print("segue")
+                    
+                   // let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbUsername")
+                  //  self.present(vc!, animated: true, completion: nil)
                     
                 }
                     
