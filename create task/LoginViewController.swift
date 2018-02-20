@@ -38,7 +38,9 @@ class LoginViewController: UIViewController {
             
         } else {
             
-            Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!)
+            
+          //  Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
                 
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbHome")
                 self.present(vc!, animated: true, completion: nil)
@@ -49,7 +51,7 @@ class LoginViewController: UIViewController {
             
             
             
-        }
+        
         
         
         
@@ -99,3 +101,4 @@ class LoginViewController: UIViewController {
     */
 
 }
+

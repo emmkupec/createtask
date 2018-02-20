@@ -76,7 +76,8 @@ class SignUpViewController: UIViewController {
                     
                 } else {
                  
-                     Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in }
+                    Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) 
+                    // Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in }
                     
                   print("Welcome to the team")
                     

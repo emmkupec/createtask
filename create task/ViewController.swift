@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             
             self.text=post!
             
-
+            self.toDatabaseTextField.text = ""
             
         })
         
