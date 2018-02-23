@@ -11,12 +11,14 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource {
-    
+class ViewController: UIViewController//, UITableViewDataSource
+{
+ 
     var text = ""
     
     //sends the strings from the text field to the database
     @IBOutlet weak var toDatabaseTextField: UITextField!
+   
     
     //takes strings from the database and displays them in this label
     @IBOutlet weak var fromDatabaseLabel: UILabel!
@@ -30,31 +32,35 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         
     }
-    
+  
+   /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
     }
+    */
+    
     //sends string to database
     @IBAction func postButton(_ sender: Any) {
         
-        
         ref = Database.database().reference()
         
-        ref?.child("list").childByAutoId().setValue(toDatabaseTextField.text) //text field put into database text
-        ref?.child("list").observe(.childAdded, with: { (snapshot) in
-            let post = snapshot.value as? String
-            self.fromDatabaseLabel.text = post
+        if toDatabaseTextField.text != "" {
+            ref?.child("createlist").childByAutoId().setValue(toDatabaseTextField.text) //text field put into database text
+      print("on the database")
+            // ref?.child("list").observe(.childAdded, with: { (snapshot) in
+           // let post = snapshot.value as? String
+          //  self.fromDatabaseLabel.text = post
             
-            self.text=post!
+           // self.text=post!
             
-            self.toDatabaseTextField.text = ""
+           // self.toDatabaseTextField.text = ""
             
-        })
-        
-        
+       // })
         
     }
+    }
+    
     
     
     
@@ -102,6 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource {
      */
     
 }
+
 
 
 
