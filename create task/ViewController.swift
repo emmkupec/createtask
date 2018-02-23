@@ -58,7 +58,20 @@ class ViewController: UIViewController//, UITableViewDataSource
             
        // })
         
-    }
+        } else {
+            
+            let alertController1 = UIAlertController(title: "Error", message: "Please Enter Text.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController1.addAction(defaultAction)
+            
+            present(alertController1, animated: true, completion: nil)
+            
+            
+            
+            
+        }
+        
     }
     
     
