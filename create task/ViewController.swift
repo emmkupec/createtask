@@ -15,13 +15,19 @@ class ViewController: UIViewController//, UITableViewDataSource
 {
  
     var text = ""
+
+
+    
+    
+    
+    
     
     //sends the strings from the text field to the database
     @IBOutlet weak var toDatabaseTextField: UITextField!
    
     
-    //takes strings from the database and displays them in this label
-    @IBOutlet weak var fromDatabaseLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
     
     
     var ref: DatabaseReference?
@@ -33,32 +39,19 @@ class ViewController: UIViewController//, UITableViewDataSource
         
     }
   
-   /*
+   
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
+       // tableView.reloadData()
     }
-    */
+    
     
     //sends string to database
     @IBAction func postButton(_ sender: Any) {
         
         ref = Database.database().reference()
         
-        if toDatabaseTextField.text != "" {
-            ref?.child("createlist").childByAutoId().setValue(toDatabaseTextField.text) //text field put into database text
-      print("on the database")
-            // ref?.child("list").observe(.childAdded, with: { (snapshot) in
-           // let post = snapshot.value as? String
-          //  self.fromDatabaseLabel.text = post
-            
-           // self.text=post!
-            
-           // self.toDatabaseTextField.text = ""
-            
-       // })
-        
-        } else {
+        if toDatabaseTextField.text == "" {
             
             let alertController1 = UIAlertController(title: "Error", message: "Please Enter Text.", preferredStyle: .alert)
             
@@ -67,6 +60,21 @@ class ViewController: UIViewController//, UITableViewDataSource
             
             present(alertController1, animated: true, completion: nil)
             
+            
+        } else {
+            
+ref?.child("createlist").childByAutoId().setValue(toDatabaseTextField.text) //text field put into database text
+            print("on the database")
+            ref?.child("createlist").observe(.childAdded, with: { (snapshot) in
+             let post = snapshot.value as? String
+                
+              self.textView.text = post
+            
+             self.text=post!
+            
+             self.toDatabaseTextField.text = ""
+            
+             })
             
             
             

@@ -29,6 +29,8 @@ class SignUpViewController: UIViewController {
         
         if emailTextField.text == "" || passwordTextField.text == "" {
         
+            print("denied1")
+            
             let alertController1 = UIAlertController(title: "Error", message: "Please Enter Your Email or Password.", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -36,7 +38,7 @@ class SignUpViewController: UIViewController {
             
             present(alertController1, animated: true, completion: nil)
         
-            print("denied1")
+            
             
         } else {
             
@@ -47,6 +49,8 @@ class SignUpViewController: UIViewController {
         
             if confirmPasswordTextField.text == "" {
                 
+                 print("denied2")
+                
                 let alertController2 = UIAlertController(title: "Error", message: "Please Confirm Password.", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -54,7 +58,7 @@ class SignUpViewController: UIViewController {
                 
                 present(alertController2, animated: true, completion: nil)
                 
-                print("denied2")
+               
                 
                 
             } else {
@@ -63,8 +67,10 @@ class SignUpViewController: UIViewController {
 
             }
         
-                if passwordTextField.text != confirmPasswordTextField.text {
+                if passwordTextField.text == "" && confirmPasswordTextField.text != passwordTextField.text {
                    
+                     print("denied3")
+                    
                     let alertController3 = UIAlertController(title: "Error", message: "Your Passwords do not match.", preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -72,7 +78,7 @@ class SignUpViewController: UIViewController {
                     
                     present(alertController3, animated: true, completion: nil)
                     
-                    print("denied3")
+                   
                     
                 } else {
                  

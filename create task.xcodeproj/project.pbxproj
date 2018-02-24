@@ -655,6 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG2H2X6LM6;
 				INFOPLIST_FILE = "create task/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "emma.create-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -671,6 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG2H2X6LM6;
 				INFOPLIST_FILE = "create task/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "emma.create-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
